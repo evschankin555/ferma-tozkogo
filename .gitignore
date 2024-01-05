@@ -1,10 +1,10 @@
 # Ignore all files and directories in the "bitrix" directory
+!bitrix/templates/dresscode/
+!bitrix/templates/dresscode_2024/
 bitrix/*
-
+assets/*
 # Ignore specific files and directories within the "bitrix" directory
-bitrix/.htaccess
-bitrix/templates/default/template.php
-bitrix/modules/main/classes/Main.php
+
 
 # Ignore any file or directory with a name that contains "cache"
 *cache*
@@ -517,4 +517,3 @@ tmp_*
 *out_of_bounds_read*
 
 # Ignore any file or directory with a name that contains
-/assets/
