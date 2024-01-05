@@ -1,0 +1,5 @@
+<?php
+$MESS['MIDOW_FERMA_MODULE_NAME'] = 'Модуль для ferma';
+$MESS['MIDOW_FERMA_MODULE_DESCRIPTION'] = '';
+$MESS['MIDOW_FERMA_PARTNER_NAME'] = "MEVEN";
+$MESS['MIDOW_FERMA_PARTNER_URI'] = "https://meven.ru/";
