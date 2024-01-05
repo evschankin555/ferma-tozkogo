@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/activities" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/admin" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/backup" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/blocks" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/catalog_export" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/components" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/css" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/fonts" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/gadgets" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/images" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/js" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/legal" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/managed_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/modules" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/otp" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/panel" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/php_interface" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/services" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/sounds" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/stack_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/themes" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/tools" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/updates" />
+      <excludeFolder url="file://$MODULE_DIR$/bitrix/wizards" />
+      <excludeFolder url="file://$MODULE_DIR$/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/assets/components/phpthumbof/cache/remote-images/www.uniconf.ru/upload/resize_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/assets/components/phpthumbof/cache/remote-images/ecomoll66.ru" />
+      <excludeFolder url="file://$MODULE_DIR$/assets/components/phpthumbof/cache/remote-images/moskva.fishretail.ru" />
+      <excludeFolder url="file://$MODULE_DIR$/assets/components/phpthumbof/cache/remote-images/pelmeshka86.ru" />
+      <excludeFolder url="file://$MODULE_DIR$/assets/components/phpthumbof/cache/remote-images/yandex.ru" />
+      <excludeFolder url="file://$MODULE_DIR$/assets/components/userorders" />
+      <excludeFolder url="file://$MODULE_DIR$/assets/js/slider" />
+      <excludeFolder url="file://$MODULE_DIR$/css" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
