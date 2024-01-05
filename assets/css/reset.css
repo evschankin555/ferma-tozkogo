@@ -1,0 +1,94 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+@font-face {
+  font-family: 'rouble';
+  src: url('font/rouble-webfont.eot');
+  src: url('font/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+       url('font/rouble-webfont.woff') format('woff'),
+       url('font/rouble-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body{height:100%;}
+#maincontayner{ min-height: 100%; height:auto !important; height:100%; min-width:960px; width:expression(document.body.clientWidth > 960? "100%" :"960px"); /* для ie */}
+#main-content{margin-top:50px;}
+body {
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:18px;
+	color:#3e4142;
+	background: url("img/bgimg.jpg");
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, select,textarea,button,#registrlink{-webkit-border-radius:5px
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	border-radius:4px;
+}
+
+input[type="text"],input[type="password"], select,textarea{
+	background: none !important;
+	outline: none;
+	padding-left:10px;
+	font-family: Tahoma;
+	border:none;
+	border: 1px solid #000000;
+}
+
+input[type="submit"],button{
+	background: #7fb243;
+	outline: none;
+	color: #ffffff;
+	border:3px solid #ffffff;
+	cursor:pointer;
+}
+
+input[type=password]:focus, input[type=text]:focus, textarea:focus { 
+box-shadow: 0px 0px 3px 3px rgba(124,174,40,0.5);
+}
+
+
+a:link, a:visited, a:active {color:#6b9539; text-decoration: underline;}
+a:hover {color:#7fb243;text-decoration: underline;}
+.clear{clear:both;}
+

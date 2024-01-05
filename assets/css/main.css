@@ -1,0 +1,269 @@
+#login-line{height:60px; background: url("img/login-line-bg.jpg") repeat-x; width-min:1000px;}
+.contayner960px{margin:0 auto; width:960px; padding: 0px 20px; position:relative;}
+#username-block{color:#fff; margin-top:15px; font-size:14px; float:left; width:180px; overflow:hidden;}
+#username-block a:link, #username-block a:visited, #username-block a:active {color:#fff; text-decoration: underline;}
+#username-block a:hover {color:#7fb243;text-decoration: underline;}
+#username-block img, #myzakaz-block img, #loveprodukt-block img, #pozvonitemne-block img, .tel-block img{margin-right:6px;}
+#myzakaz-block{width:135px; float:left; margin-left:20px; margin-top:11px;}
+#loveprodukt-block{width:130px; float:left; margin-left:10px; margin-top:17px;}
+#pozvonitemne-block{width:130px; float:left; margin-left:10px; margin-top:8px;}
+.tel-block{width:160px; float:left; margin-left:30px; color:#fff; font-size:18px;margin-top:18px;}
+#cart-block{max-height:500px;float:left; width:144px; height:41px; margin:19px 0 0 5px; background:url("img/cart-bg.jpg") no-repeat; -webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-topright:5px;border-top-left-radius:5px;border-top-right-radius:5px;}
+#logo-block{position:absolute; top:-27px; left:-50px; z-index:9999; width:363px; height:333px; background: url("img/logo-bg-image.png")no-repeat center;}
+#mainlogo{margin:70px 0 0px 117px;}
+#club-menu{margin:0px 0 10px -10px; text-align:center; font-size:15px; line-height:20px; }
+#club-menu a:link, #club-menu a:visited, #club-menu a:active, #main-menu a:link, #main-menu a:visited, #main-menu a:active{color:#615c6a; text-decoration: underline;}
+#club-menu a:hover, #main-menu a:hover {color:#000;text-decoration: underline;}
+#main-menu{margin:10px 0 0 320px; height:170px;}
+#main-menu li{width:250px; height:14px; font-family: 'Neucha', cursive; font-size:19px; float:left; padding:7px 5px 10px; margin-top:2px; margin-right:5px;}
+.dotline{height:4px; background: url("img/dotlinebg.png") repeat-x; clear:both; margin:5px 0;}
+#search-block{margin:15px 0 5px 325px;}
+#search-block input[type="text"]{width:470px;}
+#search-block input[type="submit"]{width:140px; height:30px;}
+#footer{height:176px; background:url("img/footerbg.jpg") repeat-x top; margin-top:-176px;}
+#footer-otstup{height:200px; clear:both;}
+.razdel-1{height:90px; background: url("img/decor.png") no-repeat center; margin-top:40px; text-align:center; padding-top:20px;}
+h1{font-family: 'Neucha', cursive; font-size:33px; line-height:normal;}
+h2{font-family: 'Neucha', cursive; font-size:30px; line-height:normal;}
+h3{font-family: 'Neucha', cursive; font-size:20px; line-height:normal;}
+#cart-ico{margin:8px 5px 0 8px;}
+.herePunktMenu{background:#fff; padding:3px 6px; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; border:1px solid #d6d6d6;}
+
+.empty,.shop-cart-head,.shop-cart-empty-head,.shop-cart-head{float:left;}
+.shop-cart-head{width:143px;height:40px;}
+.shop-cart-empty{font-family: 'Neucha', cursive; font-size:20px; margin:12px 0px 0 0px;}
+
+.product-b{height:355px; width:195px; float:left; margin:20px 20px;}
+.product-b select {height:25px; width:80px; font-size:14px; padding:0px 3px;text-align:left; margin-left:5px;float:left;}
+
+.shk-image{height:190px; width:190px; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; box-shadow: 5px 5px 2px -1px #b5b5b5;}
+.title-produkt{margin:10px 0; text-align:center; height:50px; overflow:hidden;}
+.title-produkt-inside{text-align:left;}
+.title-produkt-inside h1{ font-size:25px;}
+
+.product-options img{margin:0 5px 0 5px;}
+.product-price button{width:140px; height:30px; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; margin-top:10px;}
+.shk-price{font-size:22px; margin-left:10px;float:left;}
+.rub{font-family: rouble;float:left;}
+.prc{float:left; margin-top:4px;}
+
+.loveprodukt-gray,.loveprodukt-orange{width:32px; height:32px; margin:10px 8px 0 5px;float:right; cursor:pointer;}
+.loveprodukt-gray{background:url("img/love-produkt-gray.png") no-repeat;}
+.loveprodukt-orange{background:url("img/love-produkt-orange.png") no-repeat;}
+.loveprodukt-del{background:url("img/dellete-lov-prod.png") no-repeat;}
+
+.product-b .dotline{margin-top:20px;}
+#total-price-header{font-size:19px;}
+#fullcart{width:550px;max-height:500px; overflow-y:auto; top:60px; right:24px; position:absolute; z-index:2; background: #e3e1d4; border: 2px solid #fff; border-top:none; box-shadow: 5px 5px 2px -1px #b5b5b5; }
+#fullcart .shk_count_button{width:17px; height:17px; margin:4px; border:none;}
+#fullcart .shk-count{width:20px; font-size:14px;}
+#fullcart td{vertical-align:middle;padding:8px 8px 5px;}
+
+#fullcart tr:nth-child(2n){background:#edece6;} 
+
+#mini-cart{}
+.price-mini-cart{font-size:18px; width:80px;}
+.preview-mini-kart{width:70px;}
+/*.preview-mini-kart img{width:100%;}*/
+.produkt-name-mini-kart{width:120px; font-size:13px;}
+.weight-mini-kart{width:45px;}
+#mini-cart-footer{background:#4d4955; height:65px; padding-right:20px;}
+.mini-cart-order-block,.big-cart-order-block{background:#7fb243; float:left; padding-top:5px; margin:15px; 10px; 0 5px; height:25px; width:190px; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; cursor:pointer; color:#fff; text-align:center;}
+.big-cart-order-block{width:300px;float:none; margin:0 auto;}
+#total-price-mini-cart{float:left; width:200px; color:#7fb243; font-size:22px; margin-top:20px;}
+#total-price-big-cart span{font-weight:normal;}
+#total-price-big-cart{text-align:right;font-weight:bold;font-size:16px; padding-right:20px;}
+#total-price-mini-cart span{font-size:14px;}
+.empty-mini-cart-block{float:right; width:25px; height:25px;}
+.empty-mini-cart-block img{margin-top:18px;}
+.mini-cart-order-block a:link,.big-cart-order-block a:link, .mini-cart-order-block a:visited, .big-cart-order-block a:visited,.big-cart-order-block a:active, .mini-cart-order-block a:active {color:#fff; text-decoration: underline;}
+.mini-cart-order-block a:hover, .big-cart-order-block a:hover  {color:#fff;text-decoration: none;}
+
+/*стили корзины на странице оформления заказа*/
+
+#order-table{width:600px;margin:0 auto;}
+.preview-order{width:110px; height:100px; padding:0;}
+.preview-order img{padding:0; margin:0;}
+.produkt-name-order{padding:0px 10px 0;width:400px; text-align:left;}
+.produkt-name-order h3{font-size:25px;line-height:normal;}
+.produkt-name-order p{color:#3e4142; line-height:normal; font-size:15px; margin-top:8px; text-align:left; display:none;}
+.sostav:first-letter{text-transform: capitalize;}
+.produkt-name-order b, .sostav b{font-weight:bold;}
+.produkt-name-order i, .sostav i{font-style:italic; line-height:normal;}
+.cart-order{margin-top:10px;}
+#order-table td{padding-bottom:5px;vertical-align:top;}
+.opisanie-order{margin-top:20px;  font-size:15px; cursor:pointer; padding-bottom:3px; border-bottom:1px dashed;}
+.weight-order{width:110px; font-size:17px; padding:0 10px;}
+.count-order{width:110px; font-size:17px;}
+.price-order{width:200px; font-size:17px; text-align:right; padding-right:10px;}
+.price-order,.count-order,.weight-order{background:#f4f4d5;height:20px; padding-top:5px;}
+.endprodukt{padding-top:13px; height:5px;}
+.send-order{width:200px;height:40px; margin:0 43%;}
+.total-price-order{height:65px;border-top:2px dashed; text-align:right; font-size:20px;}
+.total-price-order td{padding-top:15px;}
+
+.big-cart-order td{ border-bottom:1px dashed; vertical-align:middle; padding:10px 0 10px 20px;}
+.preview-big-kart{width:100px;}
+.produkt-name-big-kart{padding-left:20px; font-size:18px; width:400px;}
+.produkt-name-big-kart p{font-size:15px; line-height:normal;margin-top:10px;}
+
+/*стили страницы МОИ ЗАКАЗЫ*/
+.header-order{cursor:pointer; padding-bottom:3px;border-bottom:1px dashed;display:inline;}
+.header-order:hover{border-bottom: none;}
+.header-order span{font-size:15px; margin-left:15px;}
+.btn-danger{background:none; border:none; background:url("img/otmena-zakaza.png") no-repeat; width:30px; height:30px;}
+/*.btn-open-products{background:none; border:none; background:url("img/produkty-iz-zakaza.png") no-repeat; width:30px; height:30px;}*/
+#order-list-table td{vertical-align:top; padding:6px;}
+#order-list-table th{vertical-align:middle; text-align:center; padding:4px; background:#ffd200;border-left: solid 1px #fff !important;}
+.status{padding:8px; color:#fff; font-size:11px; text-align:center;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px; width:70px;}
+.status div{width:100%; height:100%;}
+.one-order-content h3{font-family: Arial, Helvetica, sans-serif;}
+.one-order-price{font-size:18px; text-align:center;}
+.slide-order-list{display:none;}
+.purhases-table-header td{ background:#d8d8d8;border-right:1px solid #fff;}
+
+
+
+/*стили страницы ЛИЧНЫЙ КАБИНЕТ*/
+#kabinet-menu{width:180px;float:left; font-size:18px; line-height:30px;}
+#kabinet-content{width:700px;float:left;margin:0 10px; position:relative;}
+.kabinet-marker-line{width:9px;background:url("img/kabinet-marker-line.png") repeat-y;}
+.kabinet-marker-ugol{background:url("img/kabinet-marker-ugol.png") no-repeat;}
+#kabinet-menu td{border:0px solid;}
+
+/*стили страницы НОВОСТИ КЛУБА*/
+.news{margin:0 0 20px 20px;}
+.news-img{float:left; width:100px; height:100px; border:1px solid lightgrey;margin-bottom:15px;}
+.news-text{float:left; width:555px; margin-left:15px; margin-bottom:15px;}
+.news-text h3{font-size:23px; margin-bottom:5px;}
+.news-date{font-size:11px;margin-bottom:5px;}
+.minidot-line{background: url("img/minidot.png") repeat-x; clear:both; height:2px;}
+
+/*стили страницы СМЕНИТЬ ПАРОЛЬ*/
+#password_old, #password_new, #password_new_confirm {width:300px; padding:2px 15px 5px 10px;}
+#table-form-confirm-pass{margin-left:100px; width:480px;}
+#table-form-confirm-pass td{padding:6px; text-align:right;}
+.form-confirm-pass input[type="submit"] {padding:8px;}
+.error{padding:10px; margin:10px auto; font-size:13px; background:#ffffd8;text-align:left;}
+#success-message-ok{display:none;width:180px; height:40px; position:absolute; top:30px; left:200px; font-size:18px; text-align:center; padding-top:20px; color:#fff; background:#7fb243; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;box-shadow: 5px 5px 2px -1px rgba(0,0,0,0.5);}
+
+/*стили страницы КОНТАКТНОЕ ЛИЦО*/
+#contacts{width:100%;}
+#contacts td{vertical-align:top;padding:4px;}
+#contacts hr{border:none; border-bottom:solid 1px;}
+.send-my-on{border:none !important; width:46px; height:46px; background: url('img/send-my-green.png') no-repeat center !important; background-color:none !important;}
+.send-my-off{border:none !important; width:46px;height:46px; background: url('img/send-my-gray.png') no-repeat center !important; background-color:none !important;}
+.min-contact-ico{display:inline-block; vertical-align:middle;}
+.contact-people-name{font-size:17px; padding-bottom:5px;}
+.contact-people-del{vertical-align:middle !important;}
+#addContactPeoples{float:right; padding:3px; margin:5px 0 20px;}
+.contactPeoples{display:none; clear:both;}
+.contactPeoples td{!important; padding:4px !important;}
+.contactPeoples .label{text-align:right;}
+.contactPeoples input{width:300px !important;}
+.contactPeoples .form-buttons{text-align:center;}
+#registerbtn{padding:3px;}
+
+/*стили страницы ВЛАДЕЛЕЦ КАРТЫ*/
+#vladelic-karty-table{width:100%;}
+#vladelic-karty-table td{text-align:right;vertical-align:middle; padding:5px 0;}
+#vladelic-karty-table input[type="text"]{width:95%;}
+#vladelic-karty-table .error {padding:2px 5px; margin:10px 0 0 13px;}
+.err{padding:0  !important;}
+#vladelic-karty-table input[type="submit"]{padding:8px;}
+
+/*стили страницы СТАТЬИ*/
+.article-img{width:220px;height:220px; overflow:hidden;-webkit-border-radius:115px;-moz-border-radius:115px;border-radius:115px; border:8px solid #fff; float:left; margin-bottom:20px;}
+.article-text{width:680px; float:right;}
+.article-list{clear:both; margin:20px 0;}
+.article-list h3{margin-bottom:10px; display:inline-block;}
+.article-date{font-size:11px; font-style:italic; margin-bottom:10px;}
+.article-tags{margin-top:20px; font-style:italic;}
+.article-content{padding:40px; padding-top:0px; border:1px solid #dbdbd4; background:#faf9ef; }
+.article-content p{margin-top:15px; text-indent: 1.5em; font-size:112%; line-height:150%;}
+.article-foto{margin:0 auto; width:850px; height:400px; margin-top:40px;}
+.article-content strong{font-weight:bold;}
+.article-content em{font-style:italic;}
+
+
+/*стили КАТЕГОРИЯ КАТАЛОГА*/
+#category-info{margin-top:20px;}
+#category-info img{float:left;}
+#category-text{width:520px;margin-left:30px; float:left; font-size:16px; line-height:22px;padding-bottom:20px;}
+
+/*стили страницы КАРТОЧКА ПРОДУКТА*/
+.bigpreview{float:left;width:350px;height:350px;}
+.bigpreview .shk-image{width:350px; height:350px;}
+.content-produkt{float:left; margin-left:40px; width:565px; padding-top:0px;}
+.content-produkt .title-produkt{text-align:left;margin-top:0px;}
+.title-produkt h1{line-height:normal !important; font-size:25px !important;}
+.title-produkt{}
+.content-produkt .shk-but{margin-left:20px;}
+.content-produkt p{font-size:16px;line-height:22px; margin-bottom:20px;}
+
+/*Кнопки*/
+.basic-btn, .pages li{width:30px;height:30px;border:1px solid #cfcfcf !important; background:#eeeeee !important; padding:0px !important; text-align:center !important;}
+.basic-btn:hover, .pages li:hover{background:#f8f8f8 !important;}
+.btn-ico{border:none; margin:0 auto; width:18px; height: 18px;}
+
+/*Окно Перезвоните мне*/
+#sendmy-window{ color:lightgray; display:none; width:290px; padding:15px; border:1px solid #7f7a91; border-top:none; background:#4c4a55; position:absolute; top:60px; left:489px; z-index:2;-webkit-border-bottom-right-radius:6px;-webkit-border-bottom-left-radius:6px;-moz-border-radius-bottomright:6px;-moz-border-radius-bottomleft:6px;border-bottom-right-radius:6px;border-bottom-left-radius:6px;box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.4);}
+#sendmy-window-footer{ color:lightgray;width:290px; padding:15px; border:1px solid #7f7a91; border-top:none; background:#4c4a55; position:absolute; top:60px; left:489px; z-index:2;-webkit-border-bottom-right-radius:6px;-webkit-border-bottom-left-radius:6px;-moz-border-radius-bottomright:6px;-moz-border-radius-bottomleft:6px;border-bottom-right-radius:6px;border-bottom-left-radius:6px;box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.4);}
+#sendmy-window input[type="text"]{height:27px; margin:0px; width:170px; background: #797689!important; border:#8b879d !important; color:#fff;}
+#sendmy-window input[type="submit"]{border:none; padding:4px;margin:0px;}
+#drop-down-list{position:absolute; z-index:2; background:#797689; border:1px solid #4c4a55; border-top:none; width:173px;left:18px;display:none;}
+#drop-down-list li{padding:6px; border:none; border-top:1px solid #4c4a55;cursor:pointer;}
+#drop-down-list li:hover{background:#8d899f;}
+#pozvonitemne-block span{color:#6b9539; text-decoration:underline; cursor:pointer;}
+#pozvonitemne-block span:hover{color:#7fb243;}
+.contact-people-name-list{color:#fff;}
+.contact-people-tel-list{color:#bebbcf;}
+
+/*ПАГИНАЦИЯ*/
+.pages{clear:both; text-align:center; margin:30px 0;}
+.pages li{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px; margin:2px; display:inline; padding:5px !important;}
+.pages .active{background: #7fb243 !important; color:#fff;}
+.pages .active:hover{background: #90cc4a !important;}
+
+/*ПОИСК*/
+#search-block input[type="text"]{font-size:16px; line-height:normal; padding-top:3px;padding-bottom:3px;}
+
+/*СЛАЙДЕР*/
+.slide .shk_param{float:left; width:80px; margin-right:10px;}
+.slide .shk-price{float:left; margin:0 !important; padding-right:5px;}
+.rub{float:left;}
+.slide .product-price {margin-left:300px; margin-right:20px;}
+.slide .shk-but{margin:0; float:right;}
+.slide .shk-image{box-shadow: none; width:270px !important; height:270px !important; margin:0px !important; -webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+.slide-header{margin:20px 30px 10px 300px;}
+.slide-foto{position:absolute;top:0;left:0px;}
+.slide-intro{margin:5px 30px 10px 300px; }
+.slide .minidot-line{margin:20px 0;}
+
+/*ПОДСКАЗКИ*/
+.mytooltip{position:absolute; color:#6b6b6b; background:#f8f7e4; border:1px solid #fff;  max-width:300px; padding:5px; top:-100px; left:-100px; z-index:10000; -webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px; font-size:12px; line-height:normal;box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.2);}
+
+/*ПОДВАЛ*/
+#footer ul{list-style:disc; margin-left:50px; color:#6f6d79;}
+#footer li{margin:4px 15px 0 0;float:left; width:160px;}
+#footer .hdr{color:#6f6d79;letter-spacing:0.1em;margin-left:38px; font-weight:bold;}
+#footer  .contayner960px{padding-top:20px;}
+#club-footer-menu{width:610px; float:left;}
+#send-message {float:left; width:600px; border: 1px solid;}
+#send-message td {vertical-align:top; padding:10px;}
+#send-message label{color:#6f6d79;}
+#send-message input[type="text"],#send-message textarea{border:solid 1px #6f6d79; margin-bottom:15px; margin-top:5px;}
+#send-message input[type="submit"]{border:solid 0px #6f6d79; background:#5c5a68;color:#8b879e; padding:3px;}
+#send-message textarea{width:350px;}
+
+/*СТРАНИЦА КОНТАКТЫ*/
+#contact-cont{width:550px; margin:0 auto;}
+#vladelic-karty-table td{padding:5px;}
+#vladelic-karty-table input[type="text"],#vladelic-karty-table textarea {width:95%;}
+#vladelic-karty-table {width:100%;}
+
+/*ВСПЛЫВАЮЩЕЕ ОКНО*/
+.wndmsg{padding:10px;text-align:center;}
+
+.custom_order_message {max-width:600px;margin:10px auto;width:100%;height:100px;display:block;padding:10px;}
+

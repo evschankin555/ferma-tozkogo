@@ -1,0 +1,37 @@
+#login-block{width:415px; height:400px;margin:50px auto;padding:20px; position: relative;}
+#logo{margin:0 0 20px 105px;}
+label ,.loginFP{font-family: 'Neucha', cursive; font-size:20px;}
+input[type="text"],input[type="password"]{ height: 30px; width: 300px; margin:5px 0 10px 3px;}
+input[type="text"]{margin-left:10px;}
+input[type="submit"]{width:155px; height:35px; margin:10px 0 0 60px;}
+input[name="Login"]:hover{background:#7aaa41;}
+#registrlink:hover{background:#b7b7b7;}
+#registrlink{background:#7aaa41; margin:0 8px;outline: none;	color: #ffffff; border:3px solid #ffffff; cursor:pointer; padding:4px 25px;}
+.error{width:280px; padding:10px; margin:10px auto; font-size:13px; background:#ffffd8;}
+#loginfooter{font-size:15px; margin-top:20px;padding-left:25px;}
+#copyright{float:right; width:120px;}
+.loginFPLegend{text-align: center; margin:15px auto; width:100%;}
+.loginFPButton input[type="submit"]{width:150px; margin-left:140px;}
+.loginResetPass{margin:15 auto;}
+.forgotPassМsg{line-height:20px;}
+#overlay{position:fixed; top:0; left:0; height:100%; width:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);-moz-opacity:0.5;}
+#contaynerwindow{background:none;position:fixed; top:0; left:0; height:100%; width:100%;}
+#message-window{width:500px; background: url("img/bgimg.jpg");  border: solid 5px #fff; -webkit-border-radius:20px; -moz-border-radius:20px; -khtml-border-radius:20px; border-radius:20px; margin:50px auto;box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.2);}
+#registrikey-window{width:500px;background: url("img/bgimg.jpg"); border: solid 5px #fff; -webkit-border-radius:20px; -moz-border-radius:20px; -khtml-border-radius:20px; border-radius:20px; margin:50px auto; box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.2);}
+#registrikey-window td{padding:3px; vertical-align:middle;}
+#contact-window-text{margin:5px;}
+#registrikey-window  input[type="text"],#registrikey-window  input[type="password"]{width:100%; margin:0;}
+#registerbtn{width:250px; margin:20px auto 0 !important;}
+.register .error, .vopros .error{width:100%;margin-top:10px;}
+.register table{margin-top:10px;}
+
+.label{text-align:right;}
+#closewindow{margin-left:480px; margin-top:-10px; cursor:pointer;}
+#contact-window-text{padding:0 20px 20px 20px; font-size:16px; text-align:center; line-height:22px;}
+.vopros{padding:0 20px 20px 20px;}
+.vopros td{padding:10px; vertical-align:top; text-align:right; font-family: Arial, Helvetica, sans-serif !important;}
+.vopros label,.label{font-family: Arial, Helvetica, sans-serif; font-size:14px;}
+.vopros input, .vopros textarea{width:95%; margin:0;}
+.vopros input[type="submit"]{width:130px;}
+.dotline{height:4px; background: url("img/dotlinebg.png") repeat-x; clear:both; margin:5px 0;}
+h1{font-family: 'Neucha', cursive; font-size:34px;}
