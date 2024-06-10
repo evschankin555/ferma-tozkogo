@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Настройки профилей покупателя");
-?><h1>Настройки профилей покупателя</h1>
+?><div class='container'><h1>Настройки профилей покупателя</h1>
 <?$APPLICATION->IncludeComponent("bitrix:menu", "personal", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"ROOT_MENU_TYPE" => "personal",	// Тип меню для первого уровня
@@ -28,4 +28,6 @@ $APPLICATION->SetTitle("Настройки профилей покупателя
 		"SET_TITLE" => "N"
 	),
 	false
-);?><br /><br /><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><br /><br />
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

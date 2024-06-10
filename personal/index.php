@@ -1,7 +1,7 @@
 <?define("NEED_AUTH", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Личный кабинет");
-?><h1>Личный кабинет</h1>
+?><div class='container authorize-page'><h1>Личный кабинет</h1>
 <?$APPLICATION->IncludeComponent("bitrix:menu", "personal", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"ROOT_MENU_TYPE" => "personal",	// Тип меню для первого уровня
@@ -22,4 +22,5 @@ $APPLICATION->SetTitle("Личный кабинет");
 	Array(
 	)
 );?>
+</div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

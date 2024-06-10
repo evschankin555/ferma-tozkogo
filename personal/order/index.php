@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Заказы");
-?><h1>История заказов</h1>
+?><div class='container'><h1>История заказов</h1>
 <?$APPLICATION->IncludeComponent("bitrix:menu", "personal", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"ROOT_MENU_TYPE" => "personal",	// Тип меню для первого уровня
@@ -50,4 +50,6 @@ $APPLICATION->SetTitle("Заказы");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

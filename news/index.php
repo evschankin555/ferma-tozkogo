@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
-<?
+	<div class='container'><?
 	//include module
 	\Bitrix\Main\Loader::includeModule("dw.deluxe");
 
@@ -177,4 +177,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+	</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

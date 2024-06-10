@@ -8,7 +8,6 @@
       <excludeFolder url="file://$MODULE_DIR$/bitrix/blocks" />
       <excludeFolder url="file://$MODULE_DIR$/bitrix/cache" />
       <excludeFolder url="file://$MODULE_DIR$/bitrix/catalog_export" />
-      <excludeFolder url="file://$MODULE_DIR$/bitrix/components" />
       <excludeFolder url="file://$MODULE_DIR$/bitrix/css" />
       <excludeFolder url="file://$MODULE_DIR$/bitrix/fonts" />
       <excludeFolder url="file://$MODULE_DIR$/bitrix/gadgets" />

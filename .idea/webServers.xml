@@ -5,7 +5,7 @@
       <webServer id="59389a77-45f3-4a72-8568-8cfc683d6f50" name="u455275.ftp.masterhost.ru" url="http://u455275.ftp.masterhost.ru">
         <fileTransfer rootFolder="/xn----7sbkf1ajqbbmzs7a.xn--p1ai/www" host="u455275.ftp.masterhost.ru" port="21">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

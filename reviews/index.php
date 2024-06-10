@@ -1,5 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Отзывы о магазине");?><h1>Отзывы о магазине</h1>
+$APPLICATION->SetTitle("Отзывы о магазине");?><div class='container review-page'><h1>Отзывы о магазине</h1>
  <?$APPLICATION->IncludeComponent("bitrix:menu", "personal", array(
 	"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "",
@@ -134,5 +134,5 @@ $APPLICATION->SetTitle("Отзывы о магазине");?><h1>Отзывы о
 			false
 		);?>
 	</div>
-</div>
+</div></div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -33,22 +33,21 @@
 
 
 
-<div class="main">
-    <header class="header">
-        <div class="container header__container">
-           <div class="header__mobileBtn">
-               <button type="button" class="searchBtn js-searchBtn"></button>
-               <svg class="mobile-menu-btn js-mobileBtn"><use xlink:href="#burger"></use></svg>
-           </div>
-            <div class="header__left">
-                <div class="header__top">
-                    <div class="location"><svg class="location__icon"><use xlink:href="#location"></use></svg>Пенза</div>
-                    <a href="#" class="video-btn"><svg class="video-btn__icon"><use xlink:href="#video"></use></svg>Видео с фермы</a>
-                </div>
-                <div class="header__left-bottom">
-                   <div class="catalog">
-                       <button type="button" class="catalog-btn js-catalog"><svg class="catalog-btn__icon"><use xlink:href="#burger"></use></svg>Каталог</button>
-                       <nav class="megamenu" id="megamenu">
+<header class="header">
+    <div class="container header__container">
+        <div class="header__mobileBtn">
+            <button type="button" class="searchBtn js-searchBtn"></button>
+            <svg class="mobile-menu-btn js-mobileBtn"><use xlink:href="#burger"></use></svg>
+        </div>
+        <div class="header__left">
+            <div class="header__top">
+                <div class="location"><svg class="location__icon"><use xlink:href="#location"></use></svg>Пенза</div>
+                <a href="#" class="video-btn"><svg class="video-btn__icon"><use xlink:href="#video"></use></svg>Видео с фермы</a>
+            </div>
+            <div class="header__left-bottom">
+                <div class="catalog">
+                    <button type="button" class="catalog-btn js-catalog"><svg class="catalog-btn__icon"><use xlink:href="#burger"></use></svg>Каталог</button>
+                    <nav class="megamenu" id="megamenu">
     <div class="container megamenu__container">
         <ul class="megamenu__list">
             <li><a href=""><svg><use xlink:href="#hot"></use></svg>Горячие блюда</a></li>
@@ -75,531 +74,173 @@
     </div>
     <!-- /.container megamenu__container -->
 </nav>
-                   </div>
-                   <!-- /.catalog -->
-                    <form action="#" method="get" class="search header__search">
-                        <input type="text" class="search__input" placeholder="Поиск по каталогу" required>
-                        <button type="submit" class="search__submit"></button>
-                    </form>
+                </div>
+                <!-- /.catalog -->
+                <form action="#" method="get" class="search header__search">
+                    <input type="text" class="search__input" placeholder="Поиск по каталогу" required>
+                    <button type="submit" class="search__submit"></button>
+                </form>
+            </div>
+        </div>
+        <a href="/" class="logo header__logo"><img src="images/dist/logo.svg" alt=""></a>
+        <div class="header__right">
+            <ul class="header__menu">
+                <li><a href="">О нас</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Отзывы</a></li>
+                <li><a href="">Доставка и оплата</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+            <div class="header__right-bottom">
+                <a href="tel:+79022061220" class="header__phone">+7 (902) 206 12 20</a>
+                <div class="header__btns">
+                    <a href="" class="lk-btn"><svg class="lk-btn__icon"><use xlink:href="#heart"></use></svg></a>
+                    <a href="" class="lk-btn"><svg class="lk-btn__icon"><use xlink:href="#user"></use></svg></a>
+                    <a href="" class="lk-btn"><svg class="lk-btn__icon"><use xlink:href="#basket"></use></svg>0</a>
                 </div>
             </div>
-            <a href="/" class="logo header__logo"><img src="images/dist/logo.svg" alt=""></a>
-            <div class="header__right">
-                <ul class="header__menu">
-                    <li><a href="">О нас</a></li>
-                    <li><a href="">Новости</a></li>
-                    <li><a href="">Отзывы</a></li>
-                    <li><a href="">Доставка и оплата</a></li>
-                    <li><a href="">Контакты</a></li>
-                </ul>
-                <div class="header__right-bottom">
-                    <a href="tel:+79022061220" class="header__phone">+7 (902) 206 12 20</a>
-                    <div class="header__btns">
-                        <a href="" class="lk-btn"><svg class="lk-btn__icon"><use xlink:href="#heart"></use></svg></a>
-                        <a href="" class="lk-btn"><svg class="lk-btn__icon"><use xlink:href="#user"></use></svg></a>
-                        <a href="" class="lk-btn"><svg class="lk-btn__icon"><use xlink:href="#basket"></use></svg>0</a>
+
+        </div>
+        <form action="#" method="get" class="search search--mobile" id="header-search">
+            <input type="text" class="search__input" placeholder="Поиск по каталогу" required>
+            <button type="submit" class="search__submit"></button>
+        </form>
+    </div>
+    <!-- /.container header__container -->
+    <svg class="main__cloud"><use xlink:href="#cloud"></use></svg>
+</header>
+
+<div class="basket-page">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li><a href="/">Главная страница</a></li>
+            <li>Корзина</li>
+        </ul>
+        <h1 class="h1 basket-page__title">Корзина</h1>
+        <div class="basket-page__header">
+            <div class="view">
+                Вид каталога
+                <a href=""><svg class="view__icon"><use xlink:href="#catalog"></use></svg></a>
+                <a href="" class="is-active"><svg class="view__icon"><use xlink:href="#list"></use></svg></a>
+            </div>
+        </div>
+        <div class="basket-page__grid">
+            <div class="basket-page__product">
+                <div class="mycard">
+                    <div class="mycard__header">
+                        <svg class="mycard__heartBtn heartBtn heartBtn--remove"><use xlink:href="#close"></use></svg>
+                    </div>
+                    <div class="mycard__wrap">
+                        <img src="images/dist/card-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
+                    </div>
+                    <div class="mycard__descript">
+                        <div class="mycard__descript-top">
+                            <div class="mycard__descript-w">от 100 г</div>
+                            <div class="mycard__descript-stars">
+                                <div class="stars">
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item"><use xlink:href="#star"></use></svg>
+                                    (3)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
+                        <div class="mycard__footer">
+                            <div class="mycard__footer-price">299 ₽ <span>1 кг</span></div>
+                            <a href="" class="basket-btn">
+                                <svg><use xlink:href="#basket"></use></svg>
+                                В корзину
+                            </a>
+                        </div>
                     </div>
                 </div>
-
+                <div class="mycard">
+                    <div class="mycard__header">
+                        <svg class="mycard__heartBtn heartBtn heartBtn--remove"><use xlink:href="#close"></use></svg>
+                    </div>
+                    <div class="mycard__wrap">
+                        <img src="images/dist/card-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
+                    </div>
+                    <div class="mycard__descript">
+                        <div class="mycard__descript-top">
+                            <div class="mycard__descript-w">от 100 г</div>
+                            <div class="mycard__descript-stars">
+                                <div class="stars">
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item"><use xlink:href="#star"></use></svg>
+                                    (3)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
+                        <div class="mycard__footer">
+                            <div class="mycard__footer-price">299 ₽ <span>1 кг</span></div>
+                            <a href="" class="basket-btn">
+                                <svg><use xlink:href="#basket"></use></svg>
+                                В корзину
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mycard">
+                    <div class="mycard__header">
+                        <svg class="mycard__heartBtn heartBtn heartBtn--remove"><use xlink:href="#close"></use></svg>
+                    </div>
+                    <div class="mycard__wrap">
+                        <img src="images/dist/card-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
+                    </div>
+                    <div class="mycard__descript">
+                        <div class="mycard__descript-top">
+                            <div class="mycard__descript-w">от 100 г</div>
+                            <div class="mycard__descript-stars">
+                                <div class="stars">
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item"><use xlink:href="#star"></use></svg>
+                                    <svg class="stars__item"><use xlink:href="#star"></use></svg>
+                                    (3)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
+                        <div class="mycard__footer">
+                            <div class="mycard__footer-price">299 ₽ <span>1 кг</span></div>
+                            <a href="" class="basket-btn">
+                                <svg><use xlink:href="#basket"></use></svg>
+                                В корзину
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <form action="#" method="get" class="search search--mobile" id="header-search">
-                <input type="text" class="search__input" placeholder="Поиск по каталогу" required>
-                <button type="submit" class="search__submit"></button>
-            </form>
+            <!-- /.basket-page__product -->
+            <div class="resultBox">
+                <div class="resultBox__count">Всего товаров <span>4</span></div>
+                <div class="resultBox__count">Сумма <span>1 400,85 ₽</span></div>
+                <div class="resultBox__form">
+                    <input type="text" placeholder="Введите промокод" class="resultBox__textInput">
+                    <input type="submit" value="Активировать промокод" class="border-btn">
+                </div>
+                
+                <button type="button" class="green-btn">Оформить заказ</button>
+                <button type="button" class="border-btn">Продолжить покупки</button>
+                <button class="remove-btn">Очистить корзину<svg><use xlink:href="#close"></use></svg></button>
+            </div>
+            <!-- /.resultBox -->
         </div>
-        <!-- /.container header__container -->
-        <svg class="main__cloud"><use xlink:href="#cloud"></use></svg>
-    </header>
-    <div class="container">
-        <h1 class="h1 main__title">интернет-магазин<br> натуральных продуктов</h1>
-        <div class="main__content">
-            <div class="h1">от Фермы Тоцкого</div>
-            <p>Наше главное уникальное преимущество — все продукты, продаваемые в нашем магазине, мы выращиваем на наших фермах и перерабатываем на нашем производстве. Поэтому мы отвечаем за качество нашей продукции.</p>
-            <p>У нас есть собственная ферма на 2 000 голов коров и быков уникальной красной датской породы, куриная ферма на 50 000 голов, прудовое хозяйство на 150 га и овощная ферма в районах Пензенской области.</p>
-            <p>У нас своя сыроварня, молочный цех, кондитерский цех, пекарня, колбасный цех и фабрика-кухня.</p>
-            <a href="#" class="green-btn main__green-btn">Видео с фермы <svg class="green-btn__icon"><use xlink:href="#arrow-right-long"></use></svg></a>
-        </div>
-        <!-- /.main__content -->
+        <!-- /.basket-page__grid -->
     </div>
     <!-- /.container -->
 </div>
-<!-- /.main -->
-
-<div class="container">
-    <div class="adv-grid">
-        <div class="adv-grid__item">
-            <svg class="adv-grid__icon"><use xlink:href="#adv-1"></use></svg>
-            Доставка продукции <br>в течение суток
-        </div>
-        <div class="adv-grid__item">
-            <svg class="adv-grid__icon"><use xlink:href="#adv-2"></use></svg>
-            Широкий ассортимент, <br>более 500 позиций
-        </div>
-        <div class="adv-grid__item">
-            <svg class="adv-grid__icon"><use xlink:href="#adv-3"></use></svg>
-            Собственные <br>фермерские хозяйства
-        </div>
-        <div class="adv-grid__item">
-            <svg class="adv-grid__icon"><use xlink:href="#adv-4"></use></svg>
-            Контроль качества <br>от грядки до тарелки
-        </div>
-    </div>
-    <!-- /.adv-grid -->
-    
-    <div class="products-grid">
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Готовые блюда</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/product-img-1.jpg" width="524" height="432" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>фрукты и Овощи</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/fruits-and-vegetables.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Молочная продукция</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/milk-products.jpg" width="524" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Колбасы</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/sausages.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Рыба</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/fish.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Сыры</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/cheeses.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Парное мясо</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/meat.jpg" width="524" height="432" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>заморозка</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/freezing.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Хлеб и выпечка</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/bread.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Десерты</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/Dessert.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-        <a href="#" class="products-grid__item">
-            <span class="products-grid__top"><span>Напитки</span> <svg class="products-grid__arrow"><use xlink:href="#arrow-right-short"></use></svg></span>
-            <img src="images/dist/drinks.jpg" width="250" height="158" class="products-grid__img" alt="">
-        </a>
-    </div>
-    <!-- /.products-grid container -->
-    
-    <div class="recommend">
-        <div class="heading">
-            <h3 class="h3">Ферма Тоцкого рекомендует</h3>
-            <a href="" class="simple-btn">Все предложения</a>
-        </div>
-        <div class="card-grid recommend__card-grid">
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-gold">Рекомендуем</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/card-img-1.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-hit">Хит продаж</div>
-                    <svg class="mycard__heartBtn heartBtn is-active"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/card-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn basket-btn--disabled">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-new">Новинка</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/card-img-3.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-hit">Хит продаж</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/card-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-gold">Рекомендуем</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/card-img-1.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-new">Новинка</div>
-                    <svg class="mycard__heartBtn heartBtn is-active"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/card-img-3.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn basket-btn--disabled">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-        </div>
-        <!-- /.card-grid -->
-    </div>
-    <!-- /.recommend -->
-    <div class="hit">
-        <div class="heading">
-            <h3 class="h3">Хиты продаж</h3>
-            <a href="" class="simple-btn">Все предложения</a>
-        </div>
-        <div class="card-grid recommend__card-grid">
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-gold">Рекомендуем</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/product-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>      
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-hit">Хит продаж</div>
-                    <svg class="mycard__heartBtn heartBtn is-active"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/product-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn basket-btn--disabled">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-new">Новинка</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/product-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-hit">Хит продаж</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/product-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-gold">Рекомендуем</div>
-                    <svg class="mycard__heartBtn heartBtn"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/product-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-            <div class="mycard">
-                <div class="mycard__header">
-                    <div class="mycard__label mycard__label-new">Новинка</div>
-                    <svg class="mycard__heartBtn heartBtn is-active"><use xlink:href="#heart"></use></svg>
-                </div>
-                <div class="mycard__wrap">
-                    <img src="images/dist/product-img-2.jpg" loading="lazy" class="mycard__img" width="250" height="186" alt="">
-                </div>
-                <div class="mycard__descript">
-                    <div class="mycard__descript-top">
-                        <div class="mycard__descript-w">от 100 г</div>
-                        <div class="mycard__descript-stars">
-                            <div class="stars">
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item is-active"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                <svg class="stars__item"><use xlink:href="#star"></use></svg>
-                                (3)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mycard__title">Сыр рассольный Брынза Премиум. Собст. пр-во</div>
-                    <div class="mycard__footer">
-                        <div class="mycard__footer-price">95 ₽ <span>1 кг</span></div>
-                        <a href="" class="basket-btn basket-btn--disabled">
-                            <svg><use xlink:href="#basket"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.mycard -->
-        </div>
-        <!-- /.card-grid -->
-    </div>
-    <!-- /.hit -->
-    
-    <div class="green-box">
+<!-- /.basket-page -->
+<div class="green-box">
     <div class="green-box__wrap">
         <h2 class="h2 green-box__title">Покупайте и экономьте вместе с дисконтной картой</h2>
         <p class="green-box__text">Данная карта дает право на получение специальных условий при приобретении товаров в нашем магазине</p>
@@ -607,41 +248,6 @@
     </div>
 </div>
 <!-- /.green-box -->
-    
-    <div class="articles">
-        <div class="heading">
-            <h3 class="h3 articles__title">Полезные статьи</h3>
-            <a href="" class="simple-btn">Посмотреть все</a>
-        </div>
-        <div class="articles__grid">
-            <div class="articles__grid-item">
-               <div class="articles__grid-wrap">
-                   <h5 class="h5 articles__grid-title">Домашние сыры</h5>
-                   <div class="articles__grid-descript">Пробовали ли вы настоящую домашнюю брынзу? Ту, которую готовят по традиционной рецептуре на Кавказе и выдерживают в деревянных бочках?</div>
-               </div>
-                <a href="#" class="articles__more">Подробнее<svg class="articles__more-icon"><use xlink:href="#arrow-right-short"></use></svg></a>
-            </div>
-            <div class="articles__grid-item">
-                <div class="articles__grid-wrap">
-                    <h5 class="h5 articles__grid-title">Натуральное молоко — как выбрать?</h5>
-                    <div class="articles__grid-descript">Нам с самого детства твердили, что нет ничего полезнее молока. Правда, в современном мире этот совет не работает</div>
-                </div>
-                <a href="#" class="articles__more">Подробнее<svg class="articles__more-icon"><use xlink:href="#arrow-right-short"></use></svg></a>
-            </div>
-            <div class="articles__grid-item">
-                <div class="articles__grid-wrap">
-                    <h5 class="h5 articles__grid-title">Сезон пикников</h5>
-                    <div class="articles__grid-descript">Сезон шашлыков в самом разгаре, впереди еще много жарких летних дней, а значит мы еще не раз будем придирчиво осматривать мясо  на прилавках магазинов</div>
-                </div>
-                <a href="#" class="articles__more">Подробнее<svg class="articles__more-icon"><use xlink:href="#arrow-right-short"></use></svg></a>
-            </div>
-        </div>
-        <!-- /.articles__grid -->
-    </div>
-    <!-- /.articles -->
-</div>
-<!-- /.container -->
-
 <footer class="footer">
    <div class="footer__white">
        <div class="container footer__white-container">
@@ -744,19 +350,6 @@
                 </clipPath>
             </defs>
         </symbol>
-<!--
-        <symbol id="basket2" viewBox="0 0 24 24">
-            <g clip-path="url(#clip0_411_2506)">
-                <path d="M18.6 6.43902C18.6 2.89756 15.63 0 12 0C8.37 0 5.4 2.89756 5.4 6.43902C5.4 9.98049 8.37 12.878 12 12.878C15.63 12.878 18.6 9.98049 18.6 6.43902Z" fill="var(--primary)"/>
-                <path d="M14.61 14.2244C13.77 14.4878 12.9 14.6341 12 14.6341C11.1 14.6341 10.23 14.4878 9.39 14.2244C6.75 13.3756 3.81 14.0781 2.07 16.1561C0.78 17.7073 0 19.6976 0 21.8341C0 23.0341 0.99 24 2.22 24H21.78C23.01 24 24 23.0341 24 21.8341C24 19.6976 23.22 17.7073 21.93 16.1561C20.16 14.0781 17.25 13.3756 14.61 14.2244Z" fill="var(--primary)"/>
-            </g>
-            <defs>
-                <clipPath id="clip0_411_2506">
-                    <rect width="24" height="24" fill="white"/>
-                </clipPath>
-            </defs>
-        </symbol>
--->
         <symbol id="burger" viewBox="0 0 24 24">
             <path d="M1 4H23" stroke-width="2" stroke-linecap="round"/>
             <path d="M1 12H17" stroke-width="2" stroke-linecap="round"/>
@@ -1071,7 +664,7 @@
         <symbol viewBox="0 0 18 18" id="close">
             <path d="M1 17L16.5563 1.44365" stroke-width="2" stroke-linecap="round"/>
             <path d="M1 1L16.5563 16.5563" stroke-width="2" stroke-linecap="round"/>
-        </symbol>
+        </y>
     </svg>
 </div>
 <div class="overlay js-overlay"></div>
@@ -1082,4 +675,3 @@
 
 
 </body>
-

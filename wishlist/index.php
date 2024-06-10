@@ -1,5 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Избранное");?><h1>Избранное</h1>
+$APPLICATION->SetTitle("Избранное");?><div class='container wishlist-page'><h1>Избранное</h1>
 <?
 	//include module
 	\Bitrix\Main\Loader::includeModule("dw.deluxe");
@@ -27,4 +27,4 @@ $APPLICATION->SetTitle("Избранное");?><h1>Избранное</h1>
 		"CACHE_TIME" => "3600000"
 	),
 	false
-);?><br /><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><br /></div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1268,11 +1268,11 @@
 					);?>
 				</li>
 				<li class="dl">
-					<?$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(
+					<?/*$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(
 
 						),
 						false
-					);?>
+					);*/?>
 				</li>
 			</ul><?
 		}elseif($_GET["act"] == "rating"){
@@ -1696,6 +1696,39 @@
 						"success" => false
 					);
 				}
+
+			//push result
+			if(!empty($result)){
+				\DigitalWeb\Basket::pushResult($result);
+			}
+
+		}elseif($_GET["act"] === "clearBasket"){
+
+					if(CModule::IncludeModule("iblock") && CModule::IncludeModule("sale")
+                        && CModule::IncludeModule("catalog") && CModule::IncludeModule("dw.deluxe")){
+
+							//basket object
+                        $basketAjax = DwBasket::getInstance();
+							$basket = $basketAjax->getBasket();
+
+							//clearBasket
+							$basketAjax->clearBasket();
+
+							//Сохранение изменений
+							$basket->save();
+
+
+							if(empty($result)){
+								$result = array(
+									"heading" => "Корзина очищена",
+									"message" => "Все продукты полностью удалены из корзины.",
+									"success" => true
+								);
+							}
+
+					}
+
+
 
 			//push result
 			if(!empty($result)){

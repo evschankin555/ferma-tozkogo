@@ -1,10 +1,16 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Корзина");
-?><h1>Корзина</h1><?$APPLICATION->IncludeComponent("dresscode:sale.basket.basket", ".default", array(
+?><div class='container basket-page'>
+    <ul class="breadcrumbs">
+        <li><a href="/">Главная страница</a></li>
+        <li>Корзина</li>
+    </ul>
+    <h1 class="h1 basket-page__title">Корзина</h1>
+    <?$APPLICATION->IncludeComponent("dresscode:sale.basket.basket", ".default", array(
 		"HIDE_MEASURES" => "N",
-		"BASKET_PICTURE_WIDTH" => "220",
-		"BASKET_PICTURE_HEIGHT" => "200",
+		"BASKET_PICTURE_WIDTH" => "250",
+		"BASKET_PICTURE_HEIGHT" => "186",
 		"HIDE_NOT_AVAILABLE" => "N",
 		"PRODUCT_PRICE_CODE" => array(
 		),
@@ -21,4 +27,6 @@ $APPLICATION->SetTitle("Корзина");
 		"NO_STORES_AVAILABLE" => ""
 	),
 	false
-);?><br /><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><br />
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

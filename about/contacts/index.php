@@ -1,6 +1,8 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Задайте вопрос");
-?><h1>Контактная информация</h1>
+?>
+<div class='container contacts-page'>
+    <h1>Контактная информация</h1>
  <?
 	//include module
 	\Bitrix\Main\Loader::includeModule("dw.deluxe");
@@ -138,22 +140,53 @@ E-mail: dobrovidovaev@bk.ru</li>
 );?><br>
  <br>
 <br>
-		<?$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new",
-	"twoColumns",
-	Array(
-		"CACHE_TIME" => "360000",
-		"CACHE_TYPE" => "Y",
-		"CHAIN_ITEM_LINK" => "",
-		"CHAIN_ITEM_TEXT" => "",
-		"COMPONENT_TEMPLATE" => ".default",
-		"EDIT_URL" => "",
-		"IGNORE_CUSTOM_TEMPLATE" => "N",
-		"LIST_URL" => "",
-		"SEF_MODE" => "N",
-		"SUCCESS_URL" => "",
-		"USE_EXTENDED_ERRORS" => "Y",
-		"VARIABLE_ALIASES" => array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID",),
-		"WEB_FORM_ID" => "2"
-	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php")?>
+    <div class="container-card-and-call">
+        <div class="discount-card">
+            <h3 class="h3 discount-card__title">Покупайте и экономьте вместе с дисконтной картой</h3>
+            <div class="discount-card__text">
+                Данная карта дает право на получение специальных условий при приобретении товаров в нашем магазине
+            </div>
+            <a href="" class="green-btn green-btn--16 discount-card__green-btn">Купить продукты<svg class="green-btn__icon"><use xlink:href="#arrow-right-short"></use></svg></a>
+        </div>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:form.result.new",
+            "twoColumns",
+            Array(
+                "CACHE_TIME" => "360000",
+                "CACHE_TYPE" => "Y",
+                "CHAIN_ITEM_LINK" => "",
+                "CHAIN_ITEM_TEXT" => "",
+                "COMPONENT_TEMPLATE" => ".default",
+                "EDIT_URL" => "",
+                "IGNORE_CUSTOM_TEMPLATE" => "N",
+                "LIST_URL" => "",
+                "SEF_MODE" => "N",
+                "SUCCESS_URL" => "",
+                "USE_EXTENDED_ERRORS" => "Y",
+                "VARIABLE_ALIASES" => array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID",),
+                "WEB_FORM_ID" => "2"
+            )
+        );?>
+    </div>
+
+
+</div>
+<script>
+    $(document).ready(function(){
+        // Для каждого элемента с классом "webFormItem"
+        $('.webFormItem').each(function(){
+            // Найти input внутри текущего элемента
+            var input = $(this).find('.webFormItemField input');
+            // Получить текст лейбла
+            var labelText = $(this).find('.webFormItemLabel').text();
+
+            // Скрыть лейбл
+            $(this).find('.webFormItemLabel').hide();
+
+            // Добавить текст лейбла в плейсхолдер
+            input.attr('placeholder', labelText);
+        });
+    });
+</script>
+    <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php")?>
+

@@ -1,5 +1,6 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Личный счет");?><h1>Личный счет</h1>
+
+$APPLICATION->SetTitle("Личный счет");?><div class='container'><h1>Личный счет</h1>
 <?$APPLICATION->IncludeComponent("bitrix:menu", "personal", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"ROOT_MENU_TYPE" => "personal",	// Тип меню для первого уровня
@@ -46,4 +47,4 @@ $APPLICATION->SetTitle("Личный счет");?><h1>Личный счет</h1>
 		"SET_TITLE" => "Y"
 	),
 	false
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+    );?><br></div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

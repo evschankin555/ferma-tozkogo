@@ -1,5 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Оформить заказ");?><h1>Оформление заказа</h1><?global $USER;
+$APPLICATION->SetTitle("Оформить заказ");?><div class='container'><h1>Оформление заказа</h1><?global $USER;
 if ($USER->IsAuthorized()):?>
 	<div class="personal-order-info">*Нажимая на кнопку оформить заказ, я даю согласие на <a href="/personal-info/" class="pilink">обработку персональных данных.</a><br /></div>
 <?endif?>
@@ -35,4 +35,4 @@ if ($USER->IsAuthorized()):?>
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?></div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

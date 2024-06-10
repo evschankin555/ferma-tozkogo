@@ -1,10 +1,12 @@
 <?
 define("NEED_AUTH", true);
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
-$userName = CUser::GetFullName();
+global $USER;
+
+$userName = $USER->GetFullName(); // Используйте $USER для получения объекта текущего пользователя
 if (!$userName)
-	$userName = CUser::GetLogin();
+    $userName = $USER->GetLogin();
 ?>
 <script>
 	<?if ($userName):?>
@@ -17,7 +19,7 @@ if (!$userName)
 	document.location.href = "<?=CUtil::JSEscape($_REQUEST["backurl"])?>";
 	<?endif?>
 </script>
-
+    <div class='container authorize-page'>
 <?$APPLICATION->SetTitle("Вы зарегистрированы и успешно авторизовались.");?>
 <h1>Авторизация</h1>
 <p>Вы зарегистрированы и успешно авторизовались.</p>
@@ -38,4 +40,5 @@ if (!$userName)
 		false
 	);?>
 </div>
+    </div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

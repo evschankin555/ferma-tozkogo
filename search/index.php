@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Страница поиска");
 		$catalogIblockId = $arTemplateSettings["TEMPLATE_PRODUCT_IBLOCK_ID"];
 		$arPriceCodes = explode(", ", $arTemplateSettings["TEMPLATE_PRICE_CODES"]);
 	}
-?>
+?><div class='container search-page'>
 <?$APPLICATION->IncludeComponent(
 	"dresscode:search", 
 	".default", 
@@ -170,4 +170,25 @@ $APPLICATION->SetTitle("Страница поиска");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+	</div>
+<style>
+
+    @media (min-width: 1240px){
+        .search-page .items.category-grid__wrap{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+    @media (max-width: 1240px){
+        .search-page .items.category-grid__wrap{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media (max-width: 992px){
+        .search-page .items.category-grid__wrap{
+            grid-template-columns: repeat(2,1fr);
+        }
+
+    }
+</style>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

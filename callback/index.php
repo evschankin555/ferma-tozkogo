@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Обратная связь");
-?><h1>Обратная связь</h1><?$APPLICATION->IncludeComponent(
+?><div class='container callback-page'><h1>Обратная связь</h1><?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
 	"personal", 
 	array(
@@ -60,4 +60,6 @@ $APPLICATION->SetTitle("Обратная связь");
 			false
 		);?>
 	</div>
-</div><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+</div><br>
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

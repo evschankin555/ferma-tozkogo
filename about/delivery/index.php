@@ -4,7 +4,9 @@ $APPLICATION->SetPageProperty("description", "Осуществляем дост�
 $APPLICATION->SetPageProperty("keywords", "Доставка натуральных продуктов");
 $APPLICATION->SetPageProperty("title", "Доставка натуральных продуктов по Пензе");
 $APPLICATION->SetTitle("Доставка");
-?><h1>Доставка</h1>
+?>
+    <div class='container delivery-page'>
+    <h1>Доставка</h1>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"personal",
@@ -139,4 +141,7 @@ Array(
 </div>
  <br>
  <br>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br>
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+

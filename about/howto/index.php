@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Как купить");
-?><h1>Как купить</h1>
+?><div class='container'>
+    <h1>Как купить</h1>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"personal",
@@ -92,4 +93,6 @@ $APPLICATION->SetTitle("Как купить");
 );?>
 	</div>
 </div>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br>
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

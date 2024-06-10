@@ -4,7 +4,8 @@ $APPLICATION->SetPageProperty("description", "Предлагаем купить 
 $APPLICATION->SetPageProperty("keywords", "здоровое питание");
 $APPLICATION->SetPageProperty("title", "Здоровое питание от фермы Тоцкого в Пензе, доставка во все районы города");
 $APPLICATION->SetTitle("О клубе");
-?><h1>О нас</h1>
+?><div class='container'>
+    <h1>О нас</h1>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"personal",
@@ -99,4 +100,6 @@ Array(
 );?>
 	</div>
 </div>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br>
+    </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
