@@ -19,3 +19,28 @@ AddEventHandler("iblock", "OnAfterIBlockElementAdd", "OnAfterIBlockElementAddHan
 			)); 
     	}
     }
+
+AddEventHandler("sale", "OnBeforeBasketAdd", "OnBeforeBasketAddHandler");
+
+function OnBeforeBasketAddHandler(&$arFields) {
+    file_put_contents($_SERVER['DOCUMENT_ROOT'].'/local/log.txt', "Handler triggered\n", FILE_APPEND);
+    if ($_SESSION['USER_GEO_POSITION']['city'] == 'Москва') {
+        $res = CIBlockElement::GetList(
+            [],
+            ['ID' => $arFields['PRODUCT_ID']],
+            false,
+            false,
+            ['ID', 'IBLOCK_ID', 'PROPERTY_PRICE_MOSCOW']
+        );
+
+        if ($element = $res->GetNext()) {
+            if (!empty($element['PROPERTY_PRICE_MOSCOW_VALUE'])) {
+                file_put_contents($_SERVER['DOCUMENT_ROOT'].'/local/log.txt', "Price updated to ".$element['PROPERTY_PRICE_MOSCOW_VALUE']."\n", FILE_APPEND);
+                $arFields['PRICE'] = $element['PROPERTY_PRICE_MOSCOW_VALUE'];
+                $arFields['CUSTOM_PRICE'] = 'Y'; // Указываем, что цена кастомная
+            }
+        }
+    }
+}
+?>
+

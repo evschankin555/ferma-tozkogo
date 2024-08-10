@@ -365,12 +365,12 @@
 		}elseif($_GET["act"] == "getFastView"){
 			if(!empty($_GET["product_id"])){
 				$APPLICATION->IncludeComponent(
-					"dresscode:catalog.item",
+					"dresscode:catalog.item_2024",
 					"fast",
 					array(
 						"COMPONENT_TEMPLATE" => ".default",
 						"CACHE_TIME" => "36000000",
-						"CACHE_TYPE" => "Y",
+						"CACHE_TYPE" => "N",
 						"DISPLAY_MORE_PICTURES" => "Y",
 						"DISPLAY_LAST_SECTION" =>  "N",
 						"DISPLAY_FILES_VIDEO" =>  "N",
