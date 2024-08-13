@@ -3,12 +3,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 ?>
 <div class='container contacts-page'>
     <h1>Контактная информация</h1>
- <?
-	//include module
-	\Bitrix\Main\Loader::includeModule("dw.deluxe");
-	//get template settings
-	$arTemplateSettings = DwSettings::getInstance()->getCurrentSettings();
-?> <?$APPLICATION->IncludeComponent(
+ <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"personal",
 	Array(
@@ -54,76 +49,132 @@ E-mail: dobrovidovaev@bk.ru</li>
 ОКАТО-56401368000<br>
 ОКВЭД-52.11</li>
 </ul>
-<ul class="contactList">
-	 <?if(!empty($arTemplateSettings["TEMPLATE_TELEPHONE_1"]) || !empty($arTemplateSettings["TEMPLATE_TELEPHONE_2"])):?>
-	<li>
-	<table>
-	<tbody>
-	<tr>
-		<td>
- <img alt="cont1.png" src="/bitrix/templates/dresscode/images/cont1.png" title="cont1.png">
-		</td>
-		<td>
-			 <?if(!empty($arTemplateSettings["TEMPLATE_TELEPHONE_1"])):?><?=$arTemplateSettings["TEMPLATE_TELEPHONE_1"]?><br>
-			<?endif;?> <?if(!empty($arTemplateSettings["TEMPLATE_TELEPHONE_2"])):?><?=$arTemplateSettings["TEMPLATE_TELEPHONE_2"]?><br>
-			<?endif;?>
-		</td>
-	</tr>
-	</tbody>
-	</table>
- </li>
-	 <?endif;?> <?if(!empty($arTemplateSettings["TEMPLATE_EMAIL_1"]) || !empty($arTemplateSettings["TEMPLATE_EMAIL_2"])):?>
-	<li>
-	<table>
-	<tbody>
-	<tr>
-		<td>
- <img alt="cont2.png" src="/bitrix/templates/dresscode/images/cont2.png" title="cont2.png">
-		</td>
-		<td>
-			 <?if(!empty($arTemplateSettings["TEMPLATE_EMAIL_1"])):?><a href="mailto:<?=$arTemplateSettings['TEMPLATE_EMAIL_1']?>" title="<?=$arTemplateSettings['TEMPLATE_EMAIL_1']?>" class="bxhtmled-surrogate"><?=$arTemplateSettings['TEMPLATE_EMAIL_1']?></a><br>
-			<?endif;?> <?if(!empty($arTemplateSettings["TEMPLATE_EMAIL_2"])):?><a href="mailto:<?=$arTemplateSettings['TEMPLATE_EMAIL_2']?>" title="<?=$arTemplateSettings["TEMPLATE_EMAIL_2"]?>;" class="bxhtmled-surrogate"><?=$arTemplateSettings["TEMPLATE_EMAIL_2"]?></a>
-			<?endif;?>
-		</td>
-	</tr>
-	</tbody>
-	</table>
- </li>
-	 <?endif;?> <?if(!empty($arTemplateSettings["TEMPLATE_FULL_ADDRESS"])):?>
-	<li>
-	<table>
-	<tbody>
-	<tr>
-		<td>
- <img alt="cont3.png" src="/bitrix/templates/dresscode/images/cont3.png" title="cont3.png">
-		</td>
-		<td>
-			<div class="contactAddress">
-				<?=$arTemplateSettings["TEMPLATE_FULL_ADDRESS"]?>
-			</div>
-		</td>
-	</tr>
-	</tbody>
-	</table>
- </li>
-	 <?endif;?> <?if(!empty($arTemplateSettings["TEMPLATE_WORKING_TIME"])):?>
-	<li>
-	<table>
-	<tbody>
-	<tr>
-		<td>
- <img alt="cont4.png" src="/bitrix/templates/dresscode/images/cont4.png" title="cont4.png">
-		</td>
-		<td>
-			 <?=$arTemplateSettings["TEMPLATE_WORKING_TIME"]?>
-		</td>
-	</tr>
-	</tbody>
-	</table>
- </li>
-	 <?endif;?>
-</ul>
- <?$APPLICATION->IncludeComponent(
+    <?php
+    // Подключаем необходимые модули
+    \Bitrix\Main\Loader::includeModule("dw.deluxe");
+    \Bitrix\Main\Loader::includeModule("iblock");
+
+    // Получаем настройки шаблона
+    $arTemplateSettings = DwSettings::getInstance()->getCurrentSettings();
+
+    // Определяем город из сессии
+    $city = $_SESSION['USER_GEO_POSITION']['city'] ?? '';
+
+    // Если город Москва, загружаем данные из инфоблока
+    if ($city === 'Москва') {
+        $iblockId = 17; // ID инфоблока
+        $elementName = 'Москва'; // Название элемента (название города)
+
+        $res = CIBlockElement::GetList([], [
+            'IBLOCK_ID' => $iblockId,
+            'NAME' => $elementName
+        ], false, false, [
+            'ID',
+            'NAME',
+            'PROPERTY_TEMPLATE_TELEPHONE_1',
+            'PROPERTY_TEMPLATE_TELEPHONE_2',
+            'PROPERTY_TEMPLATE_EMAIL_1',
+            'PROPERTY_TEMPLATE_EMAIL_2',
+            'PROPERTY_TEMPLATE_FULL_ADDRESS',
+            'PROPERTY_TEMPLATE_WORKING_TIME'
+        ]);
+
+        if ($element = $res->Fetch()) {
+            $arTemplateSettings = [
+                "TEMPLATE_TELEPHONE_1" => $element['PROPERTY_TEMPLATE_TELEPHONE_1_VALUE'],
+                "TEMPLATE_TELEPHONE_2" => $element['PROPERTY_TEMPLATE_TELEPHONE_2_VALUE'],
+                "TEMPLATE_EMAIL_1" => $element['PROPERTY_TEMPLATE_EMAIL_1_VALUE'],
+                "TEMPLATE_EMAIL_2" => $element['PROPERTY_TEMPLATE_EMAIL_2_VALUE'],
+                "TEMPLATE_FULL_ADDRESS" => $element['PROPERTY_TEMPLATE_FULL_ADDRESS_VALUE'],
+                "TEMPLATE_WORKING_TIME" => $element['PROPERTY_TEMPLATE_WORKING_TIME_VALUE']
+            ];
+        }
+    }
+    ?>
+
+    <ul class="contactList">
+        <?php if (!empty($arTemplateSettings["TEMPLATE_TELEPHONE_1"]) || !empty($arTemplateSettings["TEMPLATE_TELEPHONE_2"])): ?>
+            <li>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img alt="cont1.png" src="/bitrix/templates/dresscode/images/cont1.png" title="cont1.png">
+                        </td>
+                        <td>
+                            <?php if (!empty($arTemplateSettings["TEMPLATE_TELEPHONE_1"])): ?>
+                                <?= $arTemplateSettings["TEMPLATE_TELEPHONE_1"] ?><br>
+                            <?php endif; ?>
+                            <?php if (!empty($arTemplateSettings["TEMPLATE_TELEPHONE_2"])): ?>
+                                <?= $arTemplateSettings["TEMPLATE_TELEPHONE_2"] ?><br>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        <?php endif; ?>
+
+        <?php if (!empty($arTemplateSettings["TEMPLATE_EMAIL_1"]) || !empty($arTemplateSettings["TEMPLATE_EMAIL_2"])): ?>
+            <li>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img alt="cont2.png" src="/bitrix/templates/dresscode/images/cont2.png" title="cont2.png">
+                        </td>
+                        <td>
+                            <?php if (!empty($arTemplateSettings["TEMPLATE_EMAIL_1"])): ?>
+                                <a href="mailto:<?= $arTemplateSettings['TEMPLATE_EMAIL_1'] ?>" title="<?= $arTemplateSettings['TEMPLATE_EMAIL_1'] ?>" class="bxhtmled-surrogate"><?= $arTemplateSettings['TEMPLATE_EMAIL_1'] ?></a><br>
+                            <?php endif; ?>
+                            <?php if (!empty($arTemplateSettings["TEMPLATE_EMAIL_2"])): ?>
+                                <a href="mailto:<?= $arTemplateSettings['TEMPLATE_EMAIL_2'] ?>" title="<?= $arTemplateSettings["TEMPLATE_EMAIL_2"] ?>" class="bxhtmled-surrogate"><?= $arTemplateSettings["TEMPLATE_EMAIL_2"] ?></a>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        <?php endif; ?>
+
+        <?php if (!empty($arTemplateSettings["TEMPLATE_FULL_ADDRESS"])): ?>
+            <li>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img alt="cont3.png" src="/bitrix/templates/dresscode/images/cont3.png" title="cont3.png">
+                        </td>
+                        <td>
+                            <div class="contactAddress">
+                                <?= $arTemplateSettings["TEMPLATE_FULL_ADDRESS"] ?>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        <?php endif; ?>
+
+        <?php if (!empty($arTemplateSettings["TEMPLATE_WORKING_TIME"])): ?>
+            <li>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img alt="cont4.png" src="/bitrix/templates/dresscode/images/cont4.png" title="cont4.png">
+                        </td>
+                        <td>
+                            <?= $arTemplateSettings["TEMPLATE_WORKING_TIME"] ?>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        <?php endif; ?>
+    </ul>
+
+    <?$APPLICATION->IncludeComponent(
 	"bitrix:map.yandex.view",
 	".default",
 	Array(
