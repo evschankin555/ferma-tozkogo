@@ -24,31 +24,6 @@ Array(
 	'ACTIVE_COMPONENT' => 'N'
 )
 );?>
-<ul class="contactList">
-
-<li>ИП Добровидова Елена Валерьевна<br>
-ОГРНИП 311583625800028<br>
-Юридический адрес:440011 г.Пенза,ул. Карпинского 3-19<br>
-Почтовый адрес: 440071 г.Пенза, ул. Лядова, 2<br>
-ИНН 583709113325</li>
-
-<li>Банк:<br>
-Филиал №6318 ВТБ  (ПАО),  г. Самара<br>
-р/сч 40802810420180001459<br>
-к/сч 30101810422023601968<br>
-БИК 043601968</li>
-
-
-<li>Тел./факс (8412) 955029, 955025 (бух.), 415925 (юрист)<br>
-Торговый отдел<br>
-ТЦ Космос Сити 40-72-18 , 41-04-00<br>
-ТЦ Гидростроевский  93-28-99,  93-46-46,<br>
-E-mail: dobrovidovaev@bk.ru</li>
-
-<li>ОКПО-0180308262<br>
-ОКАТО-56401368000<br>
-ОКВЭД-52.11</li>
-</ul>
     <?php
     // Подключаем необходимые модули
     \Bitrix\Main\Loader::includeModule("dw.deluxe");
@@ -59,6 +34,36 @@ E-mail: dobrovidovaev@bk.ru</li>
 
     // Определяем город из сессии
     $city = $_SESSION['USER_GEO_POSITION']['city'] ?? '';
+
+    $arTemplateSettings['IP'] =
+        "ИП Добровидова Елена Валерьевна<br>
+ОГРНИП 311583625800028<br>
+Юридический адрес:440011 г.Пенза,ул. Карпинского 3-19<br>
+Почтовый адрес: 440071 г.Пенза, ул. Лядова, 2<br>
+ИНН 583709113325";
+
+
+    $arTemplateSettings['BANK'] =
+        "Банк:<br>
+Филиал №6318 ВТБ  (ПАО),  г. Самара<br>
+р/сч 40802810420180001459<br>
+к/сч 30101810422023601968<br>
+БИК 043601968";
+
+
+    $arTemplateSettings['TORGOVIY_OTDEL'] =
+        "Тел./факс (8412) 955029, 955025 (бух.), 415925 (юрист)<br>
+Торговый отдел<br>
+ТЦ Космос Сити 40-72-18 , 41-04-00<br>
+ТЦ Гидростроевский  93-28-99,  93-46-46,<br>
+E-mail: dobrovidovaev@bk.ru";
+
+
+    $arTemplateSettings['OKPO'] =
+        "ОКПО-0180308262<br>
+ОКАТО-56401368000<br>
+ОКВЭД-52.11";
+
 
     // Если город Москва, загружаем данные из инфоблока
     if ($city === 'Москва') {
@@ -76,21 +81,45 @@ E-mail: dobrovidovaev@bk.ru</li>
             'PROPERTY_TEMPLATE_EMAIL_1',
             'PROPERTY_TEMPLATE_EMAIL_2',
             'PROPERTY_TEMPLATE_FULL_ADDRESS',
-            'PROPERTY_TEMPLATE_WORKING_TIME'
+            'PROPERTY_TEMPLATE_WORKING_TIME',
+            'PROPERTY_IP',
+            'PROPERTY_BANK',
+            'PROPERTY_TORGOVIY_OTDEL',
+            'PROPERTY_OKPO'
         ]);
 
         if ($element = $res->Fetch()) {
+
             $arTemplateSettings = [
                 "TEMPLATE_TELEPHONE_1" => $element['PROPERTY_TEMPLATE_TELEPHONE_1_VALUE'],
                 "TEMPLATE_TELEPHONE_2" => $element['PROPERTY_TEMPLATE_TELEPHONE_2_VALUE'],
                 "TEMPLATE_EMAIL_1" => $element['PROPERTY_TEMPLATE_EMAIL_1_VALUE'],
                 "TEMPLATE_EMAIL_2" => $element['PROPERTY_TEMPLATE_EMAIL_2_VALUE'],
                 "TEMPLATE_FULL_ADDRESS" => $element['PROPERTY_TEMPLATE_FULL_ADDRESS_VALUE'],
-                "TEMPLATE_WORKING_TIME" => $element['PROPERTY_TEMPLATE_WORKING_TIME_VALUE']
+                "TEMPLATE_WORKING_TIME" => $element['PROPERTY_TEMPLATE_WORKING_TIME_VALUE'],
+                "IP" => $element['PROPERTY_IP_VALUE']['TEXT'],
+                "BANK" => $element['PROPERTY_BANK_VALUE']['TEXT'],
+                "TORGOVIY_OTDEL" => $element['PROPERTY_TORGOVIY_OTDEL_VALUE']['TEXT'],
+                "OKPO" => $element['PROPERTY_OKPO_VALUE']['TEXT']
             ];
         }
     }
     ?>
+
+    <ul class="contactList">
+        <li>
+            <?= $arTemplateSettings["IP"] ?><br>
+        </li>
+        <li>
+            <?= $arTemplateSettings["BANK"] ?><br>
+        </li>
+        <li>
+            <?= $arTemplateSettings["TORGOVIY_OTDEL"] ?><br>
+        </li>
+        <li>
+            <?= $arTemplateSettings["OKPO"] ?><br>
+        </li>
+    </ul>
 
     <ul class="contactList">
         <?php if (!empty($arTemplateSettings["TEMPLATE_TELEPHONE_1"]) || !empty($arTemplateSettings["TEMPLATE_TELEPHONE_2"])): ?>
