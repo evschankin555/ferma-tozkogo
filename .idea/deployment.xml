@@ -38,6 +38,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="lojs">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="mirvann">
         <serverdata>
           <mappings>
@@ -53,6 +60,13 @@
         </serverdata>
       </paths>
       <paths name="otzyv.one">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ssh tozkogo">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

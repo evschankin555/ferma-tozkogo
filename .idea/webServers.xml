@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="4f3164b5-44b7-4ab2-9f06-6ca31808b6ed" name="ssh tozkogo">
+        <fileTransfer accessType="SFTP" host="u455275.ssh.masterhost.ru" port="22" sshConfigId="85c0e5ba-672c-4775-a20d-4072de4f0d1f" sshConfig="u455275@u455275.ssh.masterhost.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
