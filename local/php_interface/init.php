@@ -1,6 +1,39 @@
 <?php
+use Bitrix\Sale\Order;
+use Bitrix\Main\Mail\Event;
 
 AddEventHandler("iblock", "OnAfterIBlockElementAdd", "OnAfterIBlockElementAddHandler");
+AddEventHandler("sale", "OnOrderNewSendEmail", "ModifyOrderEmail");
+
+function ModifyOrderEmail($orderId, $eventName, &$arFields)
+{
+    // Логируем событие для проверки
+    file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/email_log.txt", "Обработка события OnOrderNewSendEmail для заказа ID: $orderId\n", FILE_APPEND);
+
+    // Получаем город клиента (например, из сессии)
+    $city = $_SESSION['USER_GEO_POSITION']['city'] ?? 'Неизвестный';
+
+    // По умолчанию email будет клиентский
+    $emailTo = $arFields['EMAIL'];
+
+    // Если город Москва, изменяем email на нужный
+    if ($city == 'Москва') {
+        $emailTo =  'tockogoferma@gmail.ru';
+    } else {
+        // Для всех остальных случаев
+        $emailTo = 'lubaevag@bk.ru';
+    }
+
+    $emailTo = 'FasrWebPro@yandex.ru';
+    // Изменяем email в данных события
+    $arFields['EMAIL'] = $emailTo;
+    // Добавляем город в тему письма
+    $arFields['SUBJECT'] .= " - $city";
+
+    // Логируем результат
+    file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/email_log.txt", "Email изменен на: $emailTo для заказа ID: $orderId\n", FILE_APPEND);
+}
+
 
 
     // создаем обработчик события "OnAfterIBlockElementAdd"
